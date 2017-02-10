@@ -49,11 +49,11 @@ Anschließend sollte die Datenbank soweit bearbeitet sein, dass man das Mittelwe
 
 Dies funktioniert für das Mittelwertsbild mit 
 
-	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Mean(X)', {1;0;4;0})
+	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Mean(X)', {1;0;4;0})`
 
-Dies funktioniert für das Standardabweichungsbild mit
+und für das Standardabweichungsbild mit
 
-	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Std(X)', {1;0;4;0})
+	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Std(X)', {1;0;4;0})`
 	
 Diese Schritte sind nötig, um den ersten, im Artikel beschriebenen, Weg durchzuführen.
 
@@ -61,11 +61,11 @@ Für den zweiten Weg werden nur die Grey-Matter-Bilder benötigt. Aus diesen Bil
 
 Dafür nutzt man
 
-	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Mean(X)', {1;0;4;0})
+	* `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Mean(X)', {1;0;4;0})`
 	
 und
 
-	*  `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Std(X)', {1;0;4;0})
+	*  `spm_imcalc(spm_select('List', directory, '^präfix.*\.nii$'), 'Std(X)', {1;0;4;0})`
 	
 Abschließend werden die beiden Bilder mit einem 6mm³ Filter geglättet.	
 
@@ -76,4 +76,4 @@ Nun muss man den Skriptnamen mit den passenden Parametern im Command Window eing
 
 ## Copyright
 
-Copyright (c) 2017 Jan Frielinghaus
+Copyright (c) Jan Frielinghaus
